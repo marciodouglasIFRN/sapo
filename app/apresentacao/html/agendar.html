@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/form-agendar.css">
+    <title>Sistema de Atendimento ao Público</title>
+</head>
+<body>
+        
+    <div class="header">
+        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+            <a id="logo" class="pure-menu-heading" href="">Sistema de Atendimento ao Público</a>
+
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="FrontController.php?pagina=home" class="pure-menu-link">Início</a></li>
+                <li class="pure-menu-item"><a href="FrontController.php?pagina=agendados" class="pure-menu-link">Ver Agenda</a></li>
+                <li class="pure-menu-item"><a href="FrontController.php?pagina=agendar" class="pure-menu-link">Agendar</a></li>
+                <li class="pure-menu-item"><a href="FrontController.php?pagina=sobre" class="pure-menu-link">Sobre</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="content-wrapper">
+            
+        <div class="content" >
+            
+            <h2 class="content-head is-center">Agendar atendimento</h2>
+
+            <div class="container-contact100">
+                    <div class="wrap-contact100">
+                        <form class="contact100-form validate-form" action="FrontController.php" method="post">
+                           
+                            <div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Name">
+                                <span class="label-input100">Nome Completo</span>
+                                <input class="input100" type="text" name="name" placeholder="Seu nome completo">
+                            </div>
+            
+                            <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+                                <span class="label-input100">Email</span>
+                                <input class="input100" type="text" name="email" placeholder="Seu Email ">
+                            </div>
+            
+                            <div class="wrap-input100 bg1 rs1-wrap-input100">
+                                <span class="label-input100">Telefone</span>
+                                <input class="input100" type="text" name="telefone" placeholder="(--) ---------">
+                            </div>
+
+                            <div class="wrap-input100 bg1 rs1-wrap-input100">
+                                <span class="label-input100">CPF</span>
+                                <input class="input100" type="text" name="cpf" placeholder="-----------">
+                            </div>
+
+                            <div class="wrap-input100 bg1 rs1-wrap-input100">
+                                <span class="label-input100">Data de Nascimeto</span>
+                                <input class="input100" type="date" name="dt-nascimento" placeholder="dd/MM/AAAA">
+                            </div>
+                            
+                            <div class="wrap-input100 bg1 rs1-wrap-input100">
+                                <span class="label-input100">Rua</span>
+                                <input class="input100" type="text" name="rua" placeholder="Sua Rua">
+                            </div>
+
+                            <div class="wrap-input100 bg1 rs1-wrap-input100">
+                                <span class="label-input100">Bairro</span>
+                                <input class="input100" type="text" name="bairro" placeholder="Seu Bairro">
+                            </div>
+
+                            <div class="wrap-input100 bg1 rs1-wrap-input100">
+                                <span class="label-input100">Número</span>
+                                <input class="input100" type="text" name="bairro" placeholder="Número">
+                            </div>
+        
+                            <div class="wrap-input100 input100-select bg1">
+                                <span class="label-input100">Escolha o serviço</span>
+                                <div>
+                                    <select class="js-select2" name="service">
+                                        <option>Secretaria de Transporte</option>
+                                        <option>Secretaria de Educação</option>
+                                        <option>Secretaria de Meio Ambiente</option>
+                                        <option>Secretaria de Saúde</option>
+                                        <option>Secretaria de Esporte</option>
+                                        <option>Secretaria de Pilantragem</option>                     
+                                    </select>
+                                    <div class="dropDownSelect2"></div>
+                                </div>
+                            </div>
+            
+            
+                            
+                            <div class="container-contact100-form-btn">
+                                <button id='btn-agendar' class="contact100-form-btn">
+                                    <span>
+                                        Salvar  
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            
+        </div>
+        
+    
+        <div class="footer l-box is-center">
+           <p>TADS 6v</p> 
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+/* -----------configurações gerais----------------- */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.7em;
+    color: #7f8c8d;
+    font-size: 13px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+    color: #34495e;
+}
+
+/* -----------configurações do menu----------------- */
+
+.home-menu {
+    padding: 0.5em;
+    text-align: center;
+    box-shadow: #9CDCAA;
+}
+.home-menu {
+    background: #148E2F;
+}
+.pure-menu.pure-menu-fixed {
+    /* Fixed menus normally have a border at the bottom. */
+    border-bottom: none;
+    /* I need a higher z-index here because of the scroll-over effect. */
+    z-index: 4;
+}
+
+.home-menu .pure-menu-heading {
+    color: white;
+    font-weight: 400;
+    font-size: 120%;
+}
+
+.home-menu .pure-menu-selected a {
+    color: #ccc;
+}
+
+.home-menu a {
+    color: #fff;
+}
+.home-menu li a:hover,
+.home-menu li a:focus {
+    background: none;
+    border: none;
+    color: #8FF6A6;
+}
+/* -----------configurações conteúdo----------------- */
+.content-wrapper {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    min-height: 12%;
+    z-index: 2;
+    background: white;
+
+}
+
+.content {
+    padding: 1em 1em 3em;
+}
+
+.content-head {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 2em 0 1em;
+}
+.is-center{
+    text-align: center
+}
+.content-subhead {
+    color: #097B22;
+}
+#conteudo-inferior{
+    border-left: #097B22 15px solid;
+    border-right: #097B22 15px solid;
+    border-top: #097B22 2px solid;
+    border-bottom: #097B22 2px solid;
+    justify-content: center;
+
+}
+#conteudo-interno{
+    width: 90%;
+    height: auto;
+    padding-bottom: 50px;
+}
+.atendimentos{
+    text-align: center;
+}
+/* -----------Ajustes de rodapé----------------- */
+.footer {
+    background: #999999;
+    color: white;
+    margin-top: 50px;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    padding-top: 2.5px;
+}
+
+/*-----------formularios agendar--------------------*/
+#esquerda{
+    float: left;
+    margin: 15px
+}
+#direita{
+    float: right;
+   margin: 15px;
+}
+
+#agendar{
+    width: 700px;
+    height: auto;
+    padding-bottom: 50px;
+}
+/*-----------Tabela responsiva--------------------*/
+
+.dataTable {
+    display: block;
+    width: 100%;
+    margin: 1em 0;
+}
+
+.dataTable thead, .dataTable tbody, .dataTable thead tr, .dataTable th {
+    display: block;
+}
+
+.dataTable thead {
+    float: left;
+}
+
+.dataTable tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+}
+
+.dataTable td, .dataTable th {
+padding: .625em;
+    line-height: 1.5em;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.dataTable th {
+    text-align: left;
+    background: rgba(0, 0, 0, 0.14);
+    border-bottom: 1px dashed #aaa;
+}
+
+.dataTable tbody tr {
+    display: table-cell;
+}
+
+.dataTable tbody td {
+    display: block;
+}
+
+.dataTable tr:nth-child(odd) {
+    background: rgba(0, 0, 0, 0.07);
+}
+
+@media screen and (min-width: 50em) {
+
+.dataTable {
+     display: table;
+}
+
+.dataTable thead {
+    display: table-header-group;
+    float: none;
+}
+
+.dataTable tbody {
+    display: table-row-group;
+}
+
+.dataTable thead tr, .dataTable tbody tr {
+    display: table-row;
+}
+
+.dataTable thead tr th{
+    height: auto;
+}
+
+.dataTable th, .dataTable tbody td {
+    display: table-cell;
+}
+
+.dataTable td, .dataTable th {
+    width: auto;
+}
+
+}
+/* -----------Ajustes de resoluções----------------- */
+
+@media (min-width: 48em) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .home-menu {
+        text-align: left;
+    }
+    .home-menu ul {
+        float: right;
+    }
+    .splash {
+        width: 50%;
+        height: 50%;
+    }
+
+    .splash-head {
+        font-size: 250%;
+    }
+    .l-box-lrg {
+        border: none;
+    }
+
+}
+
+@media (min-width: 78em) {
+    .splash-head {
+        font-size: 300%;
+    }
+}

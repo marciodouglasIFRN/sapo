@@ -1,0 +1,35 @@
+
+ATOR: Cidadao
+
+INCLUDES: Consultar Agendamento
+
+FLUXO BASICO:
+
+1 - Na tela 'Consultar Agendamento', o Cidadao seleciona a opcao 'Reagendar' no proprio registro. 
+2 - O Sistema apresenta a tela de reagendamento com as informacoes do agendamento. (info.1)
+3 - Alem disso, o sistema apresenta a disponibilidade para o agendamento.
+4 - O cidadao escolhe o novo dia e hora que deseja alterar o atendimento e confirma a solicitacao.
+5 - O sistema encaminha a confirma a realizacao do reagendamento para a tela principal com a seguinte msg.1.
+
+
+FLUXO ALTERNATIVO:
+
+alt.1 - Erro no servidor e/ou inacessivel
+	1 - O sistema encaminha a solicitacao para a pagina principal com a seguinte mensagem msg.1
+
+alt.2 - O Cidadao cancela a solicitacao
+	1 - O sistema devera encaminhar para FB.1 com a seguinte mensagem msg.2
+
+alt.3 - O cidadao nao quer fornecer o motivo
+	1 - O cidadao 'Confirma' o atendimento da mensagem.
+	2 - O segue o fluxo FB.6. 
+
+MENSAGENS:
+
+msg.1 - Reagendamento realizao com sucesso! 
+
+CAMPOS
+
+info.1 - 'CPF' / 'Sigla' / 'Nome Completo' / 'Nome do Servico' / 'Data' / 'Hora'
+
+	

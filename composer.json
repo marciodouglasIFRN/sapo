@@ -1,0 +1,19 @@
+{
+    "name": "gitpod/sa-po",
+    "require-dev": {
+        "phpunit/phpunit": "^8.4"
+    },
+    "authors": [
+        {
+            "name": "Márcio Douglas",
+            "email": "marcio.xavier@academico.ifrn.edu.br"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "classmap": [
+            "app/",
+            "teste/"
+        ]
+    }
+}
