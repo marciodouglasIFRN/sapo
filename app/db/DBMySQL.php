@@ -21,12 +21,12 @@ class DBMySQL{
             $db_driver = "mysql";
             
             try {
-                self::$db = new PDO("$db_driver:host=$db_host; dbname=$db_nome", $db_usuario, $db_senha);
-                self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                self::$db = new \PDO("$db_driver:host=$db_host; dbname=$db_nome", $db_usuario, $db_senha);
+                self::$db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
                 self::$db->exec('SET NAMES utf8');
 
             } catch (PDOException $e) {
-                throw new SistemaException ( $e->getMessage(), $e->getCode(), $e);
+                throw new SistemaException ( $e->getMessage(), $e->getCode(), null);
             }
         }
     }
@@ -35,7 +35,7 @@ class DBMySQL{
     private static function conexao()
     {
         if (!isset(self::$db)) {
-            self::$db = new DBMySQL();
+            new DBMySQL();
         }
         
         return self::$db;
@@ -49,7 +49,7 @@ class DBMySQL{
 
             return $stmt;
         } catch (PDOException $e) {
-            throw new SistemaException ( $e->getMessage(), $e->getCode(), $e);
+            throw new SistemaException ( $e->getMessage(), $e->getCode(), null);
         }
     }
 

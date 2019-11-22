@@ -29,12 +29,12 @@ class Agendamento extends Persistente{
 
     public function objectToArray() : array{
         return [
-            "data" => $data,
-            "cidadao" => $cidadao
+            "data" => $this->data,
+            "cidadao" => $this->cidadao
         ];
     }
     public function getData(){
-        return $data;
+        return $this->data;
     }
 
     public function setData($data){

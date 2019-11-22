@@ -11,22 +11,22 @@ if (isset($_POST['dt-nascimento'])) {
     $agendamentoRepositorio->inserir($agendamento);
 }
 
+$rotas = [
+    'home' => 'html/index.html',
+    'agendar' => 'html/agendar.html',
+    'agendados' => 'html/agendados.html',
+    'reagendar' => 'html/reagendar.html',
+    'consultar' =>  'html/consultaragendamento.html'
+];
 
-$pagina = 'home';
-if (isset($_GET['pagina'])) {
-    $pagina = $_GET['pagina'];
+$rota = 'home';
+if (isset($_GET['rota'])) {
+    $rota = $_GET['rota'];
 }
-#Gerenciar Alunos
-if($pagina == 'home') {
-	include 'html/index.html';
-}elseif($pagina == 'agendar') {
-	include 'html/agendar.html';
-}elseif ($pagina == 'agendados') {
-	include 'html/agendados.html';
-}elseif ($pagina == 'reagendar') {
-	include 'html/reagendar.html';
+if(array_key_exists($rota,$rotas)){
+    include $rotas[$rota];
 }else{
-    echo '404';
+    include 'html/404.html';
 }
 
 ?>

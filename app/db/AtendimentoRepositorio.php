@@ -9,7 +9,7 @@ class AgendamentoRepositorio extends DBMySQL implements IRepositorio {
     }
     
     public function inserir(Persistente $persistente){
-        $sql = "INSERT INTO atendimento (data) VALUES (:data)";
+        $sql = "INSERT INTO atendimento (data,cidadao_id) VALUES (:data,:cidadao)";
         return $this->update($sql, $persistente->objectToArray());
     }
 
