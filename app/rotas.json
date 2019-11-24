@@ -1,0 +1,33 @@
+{
+    "/home": {
+        "controller": "IndexController",
+        "action": "index"
+    },
+
+    "/agendar": {
+        "controller": "AgendamentoController",
+        "action": "agendar",
+        "method": "GET"
+    },
+    "/agendados": {
+        "controller": "AgendamentoController",
+        "action": "agendados",
+        "method": "GET"
+    },
+    "/consultar": {
+        "controller": "AgendamentoController",
+        "action": "consultar",
+        "method": "GET"
+    },
+    "/consultar": {
+        "controller": "AgendamentoController",
+        "action": "consultar",
+        "method": "POST"
+    },
+    "/teste/{}": {
+        "controller": "AgendamentoController",
+        "action": "teste",
+        "method": "GET"
+    }
+
+}

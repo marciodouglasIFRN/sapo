@@ -1,14 +1,13 @@
 // Importação do arquivo ajax.js
 var imp = document.createElement('script')
-imp.src = 'js/ajax.js'
+imp.src = 'apresentacao/js/ajax.js'
 document.head.appendChild(imp)
-
 
 form = document.getElementById('form-consultar')
 number = 157;
 form.addEventListener('submit', (event) => {
     event.preventDefault()
-    clienteAjax.post('FrontController.php', { cpt: '123', secretaria: '12' }, (data) => {
+    clienteAjax.post('http://localhost/marcio/sapo/app/consultar', { cpt: '123', secretaria: '12' }, (data) => {
         alert(data)
     })
     number++
