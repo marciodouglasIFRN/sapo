@@ -2,9 +2,10 @@
 namespace auxiliares;
 
 use entidades\Cidadao;
+use entidades\Persistente;
 
 class CidadaoFactory implements IEntidadeFactory{
-    function criar($json)
+    function criar($json):Persistente
     {
         return new Cidadao(1,'qualquer',$json['cpf']);
     }

@@ -12,7 +12,15 @@ form.addEventListener('submit', (event) => {
     document.querySelector('tbody').innerHTML = 'Carregando...'
     clienteAjax.post('http://localhost/marcio/sapo/app/obter', { cpf: cpf, secretaria: secretaria }, (data) => {
         agendamentos = JSON.parse(data)
-        render(agendamentos)
+
+        if (agendamentos.length === 0) {
+            document.querySelector('tbody').innerHTML = 'Sem agendamento marcado para esse CPF'
+
+        } else {
+            render(agendamentos)
+
+        }
+
 
     })
 
