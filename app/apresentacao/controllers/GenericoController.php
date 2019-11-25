@@ -1,6 +1,6 @@
 <?php
 
-use auxiliares\IEntidadeFactory;
+use fabricas\IEntidadeFactory;
 use entidades\Persistente;
 use respositorios\IRepositorio;
 

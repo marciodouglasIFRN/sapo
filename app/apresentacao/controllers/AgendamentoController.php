@@ -2,7 +2,7 @@
 
 namespace controllers;
 
-use auxiliares\AgendamentoFactory;
+use fabricas\AgendamentoFactory;
 use db\AgendamentoRepositorio;
 use GenericoController;
 

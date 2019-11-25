@@ -28,6 +28,16 @@
         "controller": "AgendamentoController",
         "action": "consultar",
         "method": "POST"
+    },
+    "/secretarias": {
+        "controller": "SecretariaController",
+        "action": "listar",
+        "method": "GET"
+    },
+    "/servicos": {
+        "controller": "ServicoController",
+        "action": "consultar",
+        "method": "GET"
     }
 
 }

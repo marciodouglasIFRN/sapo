@@ -31,7 +31,7 @@ class FrontController{
             $resposta = $controller->$action($data);
             echo $resposta;
         }else{
-            echo '404'; 
+            include 'html/404.html'; 
         }
     }
 

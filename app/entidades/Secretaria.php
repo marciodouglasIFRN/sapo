@@ -1,8 +1,9 @@
 <?php 
 
 namespace entidades;
+use entidades\Persistente;
 
-class Secretaria extends \Persistente {
+class Secretaria extends Persistente {
 
     /**
      * @var string
@@ -15,7 +16,7 @@ class Secretaria extends \Persistente {
     private $sigla;
 
 
-    public static function arrayToObject(array $valores) : Secretaria {
+    static function arrayToOBject(array $valores) {
         return new self($valores["identificador"], $valores["nome"], $valores["sigla"]);
     }
 
@@ -34,11 +35,11 @@ class Secretaria extends \Persistente {
         return $this->sigla;
     }
 
-    public function objectToArray(){
+    public function objectToArray() : array {
         return  [
-            'identificador' => $identificador,
-            'nome' => $nome,
-            'sigla' => $sigla
+            'identificador' => $this->identificador,
+            'nome' => $this->nome,
+            'sigla' => $this->sigla
         ];
     }
 }

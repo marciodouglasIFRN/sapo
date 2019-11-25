@@ -44,13 +44,7 @@
                                     <div class="wrap-input100 input100-select bg1">
                                         <span class="label-input100">Escolha o serviço</span>
                                         <div>
-                                            <select class="js-select2" name="service">
-                                                <option>Secretaria de Transporte</option>
-                                                <option>Secretaria de Educação</option>
-                                                <option>Secretaria de Meio Ambiente</option>
-                                                <option>Secretaria de Saúde</option>
-                                                <option>Secretaria de Esporte</option>
-                                                <option>Secretaria de Pilantragem</option>                     
+                                            <select class="js-select2" name="select-secretarias">                
                                             </select>
                                             <div class="dropDownSelect2"></div>
                                         </div>
@@ -69,36 +63,12 @@
                                     <thead>
                                         <tr>
                                             <th>Secretaria</th>
-                                            <th>Local</th>
-                                            <th>Horário de Início</th>
-                                            <th>Horário de Término</th>
+                                            <th>Servico</th>
+                                            <th>Data e Hora</th>
+                                            <th>#</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Secretaria de Desvio de Verbas</td>
-                                            <td>Prédio 157</td>
-                                            <td>9 horas</td>
-                                            <td>12 horas</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Secretaria de Desvio de Verbas</td>
-                                            <td>Prédio 157</td>
-                                            <td>9 horas</td>
-                                            <td>12 horas</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Secretaria de Desvio de Verbas</td>
-                                            <td>Prédio 157</td>
-                                            <td>9 horas</td>
-                                            <td>12 horas</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Secretaria de Desvio de Verbas</td>
-                                            <td>Prédio 157</td>
-                                            <td>9 horas</td>
-                                            <td>12 horas</td>
-                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -125,24 +95,25 @@
                            
 
                             <div class="wrap-input100 bg1 rs1-wrap-input100">
-                                <span class="label-input100">CPF</span>
-                                <input class="input100" type="text" name="cpf" placeholder="-----------">
+                                <span class="label-input100">Nova Data</span>
+                                <input class="input100" type="date" name="nova-data" placeholder="dd/MM/AAAA">
                             </div>
                             <div class="wrap-input100 input100-select bg1">
-                                <span class="label-input100">Escolha o serviço</span>
+                                <span class="label-input100">Escolha a Secretaria</span>
                                 <div>
-                                    <select class="js-select2" name="service">
-                                        <option>Secretaria de Transporte</option>
-                                        <option>Secretaria de Educação</option>
-                                        <option>Secretaria de Meio Ambiente</option>
-                                        <option>Secretaria de Saúde</option>
-                                        <option>Secretaria de Esporte</option>
-                                        <option>Secretaria de Pilantragem</option>                     
+                                    <select class="js-select2" name="select-ecretarias-modal">                  
                                     </select>
                                     <div class="dropDownSelect2"></div>
                                 </div>
                             </div>
-            
+                            <div class="wrap-input100 input100-select bg1">
+                                <span class="label-input100">Escolha o Servico</span>
+                                <div>
+                                    <select class="js-select2" name="select-servicos">                 
+                                    </select>
+                                    <div class="dropDownSelect2"></div>
+                                </div>
+                            </div>
             
                             
                             <div class="container-contact100-form-btn">

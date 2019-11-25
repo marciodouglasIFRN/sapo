@@ -1,5 +1,5 @@
 <?php
-namespace auxiliares;
+namespace fabricas;
 
 use entidades\Agendamento;
 use entidades\Persistente;
