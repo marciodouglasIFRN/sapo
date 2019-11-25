@@ -33,13 +33,13 @@ class Cidadao extends Persistente {
         return $this->cpf;
     }
     public static function arrayToOBject(array $valores){
-        return new self($valore['nome'],$valores['cpf']);
+        return new self($valores['identidade'],$valores['nome'],$valores['cpf']);
     }
 
     public function objectToArray() : array{
         return [
-            "nome" => $nome,
-            "cpf" => $cpf
+            "nome" => $this->nome,
+            "cpf" => $this->cpf
         ];
     }
 

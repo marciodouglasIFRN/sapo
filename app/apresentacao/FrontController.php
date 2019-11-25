@@ -17,9 +17,10 @@ class FrontController{
         $prefixo = '/marcio/sapo/app';
         $url = str_replace($prefixo,'',$url);
         $data = explode('/',$url);
-        // var_dump($_SERVER['REQUEST_METHOD'] );
-        if(count($data)>2){
-            $url = str_replace(end($data),'{}',$url);
+        if($_SERVER['REQUEST_METHOD'] == 'GET'){
+            $data = $_GET;
+        }else{
+            $data = $_POST;
         }
 
         if(array_key_exists($url,$this->routes))
@@ -27,7 +28,8 @@ class FrontController{
             $class = "controllers\\" . $this->routes[$url]['controller'];
             $controller = new $class;
             $action = $this->routes[$url]['action'];
-            $controller->$action(end($data));
+            $resposta = $controller->$action($data);
+            echo $resposta;
         }else{
             echo '404'; 
         }
@@ -61,6 +63,90 @@ $route  = new FrontController;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // var_dump($_SERVER['REQUEST_METHOD'] );
+        // if($_SERVER['REQUEST_METHOD'] == 'GET' && count($data)>2){
+        //     $data = end($data);
+        //     $url = str_replace($data,'{}',$url);
+        // }
 
 
 

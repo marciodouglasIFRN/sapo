@@ -2,25 +2,17 @@
 
 namespace controllers;
 
+use auxiliares\AgendamentoFactory;
+use db\AgendamentoRepositorio;
 use GenericoController;
 
 class AgendamentoController extends GenericoController{
-    function agendar()
+    function __construct()
     {
-        $this->render('agendar');
+        parent::__construct(new AgendamentoRepositorio, new AgendamentoFactory);
     }
-    function consultar()
-    {
-        $this->render('consultaragendamento');
-    }
-    function agendados()
-    {
-        $this->render('agendados');
-    }
-    function teste($data){
-        echo $data;
-    }
-    function atualizar()
+
+    function atualizar($json)
     {
         
     }

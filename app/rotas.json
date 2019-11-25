@@ -5,29 +5,29 @@
     },
 
     "/agendar": {
-        "controller": "AgendamentoController",
+        "controller": "IndexController",
         "action": "agendar",
         "method": "GET"
     },
     "/agendados": {
-        "controller": "AgendamentoController",
+        "controller": "IndexController",
         "action": "agendados",
         "method": "GET"
     },
     "/consultar": {
-        "controller": "AgendamentoController",
+        "controller": "IndexController",
         "action": "consultar",
         "method": "GET"
     },
-    "/consultar": {
+    "/reagendar": {
+        "controller": "IndexController",
+        "action": "reagendar",
+        "method": "GET"
+    },
+    "/obter": {
         "controller": "AgendamentoController",
         "action": "consultar",
         "method": "POST"
-    },
-    "/teste/{}": {
-        "controller": "AgendamentoController",
-        "action": "teste",
-        "method": "GET"
     }
 
 }

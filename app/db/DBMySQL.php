@@ -14,10 +14,10 @@ class DBMySQL{
         
         if(!isset(self::$pdo)){
 
-            $db_host = "db4free.net";
+            $db_host = "localhost";
             $db_nome = "bancofpenha";
-            $db_usuario = "marciodouglas";
-            $db_senha = "12345678";
+            $db_usuario = "root";
+            $db_senha = "12345";
             $db_driver = "mysql";
             
             try {
@@ -58,7 +58,7 @@ class DBMySQL{
         return $stmt->rowCount();
     }
     
-    protected function select (string $SQL, array $dados){
+    protected function select (string $sql, array $dados){
         $stmt = $this->query($sql, $dados);
         return $stmt->fetchAll();
     }

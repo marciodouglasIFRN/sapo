@@ -13,9 +13,24 @@ class AgendamentoRepositorio extends DBMySQL implements IRepositorio {
         return $this->update($sql, $persistente->objectToArray());
     }
 
-    public function atualizar(Persistente $persistente){}
-    public function excluir(Persistente $persistente){}
-    public function selecionar(Persistente $persistente){}
-    public function selecionarTodos(){}
+    public function atualizar(Persistente $persistente){
+        $sql = "UPDATE `atendimento` SET `data`=:data,`cidadao_id`=:cidadao_id WHERE id = :id";
+        return $this->select($sql,$persistente->objectToArray());
+    }
+    public function excluir(Persistente $persistente){
+        //DELETE FROM `atendimento` WHERE 0
+    }
+
+    public function selecionar(Persistente $persistente){
+        $sql = "SELECT ag.id,cd.nome cidadao,se.nome servico, ag.data FROM 
+        `agendamento` ag,`cidadao` cd,`agendamento_cidadao` ac,`servico` se
+        WHERE ag.id = ac.agendamento_id and cd.id = ac.cidadao_id and se.id = ag.servico_id and cd.cpf = :cpf";
+        return $this->select($sql,array("cpf"=> $persistente->getCidadao()->getCpf()));
+    }
+
+    public function selecionarTodos(){
+        $sql = "SELECT `id`, `data`, `cidadao_id` FROM `atendimento` WHERE 1";
+        return $this->select($sql,array());
+    }
 
 }

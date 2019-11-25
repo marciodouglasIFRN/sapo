@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
     <link rel="stylesheet" href="apresentacao/css/estilo.css">
     <link rel="stylesheet" href="apresentacao/css/form-agendar.css">
+    <link rel="stylesheet" type="text/css" href="apresentacao/css/modal-editar.css">
+
     <title>Sistema de Atendimento ao Público</title>
 </head>
 <body>
+        
     <div class="header">
         <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
             <a id="logo" class="pure-menu-heading" href="">Sistema de Atendimento ao Público</a>
@@ -26,18 +29,138 @@
     </div>
     
     <div class="content-wrapper">
-            
-        <div class="content" >
-            
+        <div class="content">
             <h2 class="content-head is-center">Consultar Agendamento</h2>
+    
+            <div class="is-center">
+                    <div id="conteudo-inferior" class="ribbon l-box-lrg pure-g">
+                            <div id="conteudo-interno" class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+                                 <form id ="form-consultar" class="contact100-form validate-form"  method="post">
+                                
+                                    <div class="wrap-input100 bg1 rs1-wrap-input100">
+                                        <span class="label-input100">CPF</span>
+                                        <input class="input100" type="text" name="cpf" placeholder="-----------">
+                                    </div>
+                                    <div class="wrap-input100 input100-select bg1">
+                                        <span class="label-input100">Escolha o serviço</span>
+                                        <div>
+                                            <select class="js-select2" name="service">
+                                                <option>Secretaria de Transporte</option>
+                                                <option>Secretaria de Educação</option>
+                                                <option>Secretaria de Meio Ambiente</option>
+                                                <option>Secretaria de Saúde</option>
+                                                <option>Secretaria de Esporte</option>
+                                                <option>Secretaria de Pilantragem</option>                     
+                                            </select>
+                                            <div class="dropDownSelect2"></div>
+                                        </div>
+                                    </div>
+                    
+                                    
+                                    <div class="container-contact100-form-btn">
+                                        <button id='btn-agendar' class="contact100-form-btn">
+                                            <span>
+                                                Consultar  
+                                            </span>
+                                        </button>
+                                    </div>
+                                </form>
+                                <table class="dataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Secretaria</th>
+                                            <th>Local</th>
+                                            <th>Horário de Início</th>
+                                            <th>Horário de Término</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Secretaria de Desvio de Verbas</td>
+                                            <td>Prédio 157</td>
+                                            <td>9 horas</td>
+                                            <td>12 horas</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Secretaria de Desvio de Verbas</td>
+                                            <td>Prédio 157</td>
+                                            <td>9 horas</td>
+                                            <td>12 horas</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Secretaria de Desvio de Verbas</td>
+                                            <td>Prédio 157</td>
+                                            <td>9 horas</td>
+                                            <td>12 horas</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Secretaria de Desvio de Verbas</td>
+                                            <td>Prédio 157</td>
+                                            <td>9 horas</td>
+                                            <td>12 horas</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+            </div>
+        </div>
+    
+        
+        
+        <div class="footer l-box is-center">
+           <p>TADS 6v</p> 
+        </div>
 
-            <div class="container-contact100">
-                    <div class="wrap-contact100">
-                        <form id ="form-consultar" class="contact100-form validate-form" >
+<!-- The Modal -->
+    <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+
+            <div id="conteudo-inferior" class="ribbon l-box-lrg pure-g modal-content">
+                    <div id="conteudo-interno" class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+                        <form class="contact100-form validate-form" action="FrontController.php" method="post">
+                           
+                            <div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Name">
+                                <span class="label-input100">Nome Completo</span>
+                                <input class="input100" type="text" name="name" placeholder="Seu nome completo">
+                            </div>
+            
+                            <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+                                <span class="label-input100">Email</span>
+                                <input class="input100" type="text" name="email" placeholder="Seu Email ">
+                            </div>
+            
+                            <div class="wrap-input100 bg1 rs1-wrap-input100">
+                                <span class="label-input100">Telefone</span>
+                                <input class="input100" type="text" name="telefone" placeholder="(--) ---------">
+                            </div>
 
                             <div class="wrap-input100 bg1 rs1-wrap-input100">
                                 <span class="label-input100">CPF</span>
                                 <input class="input100" type="text" name="cpf" placeholder="-----------">
+                            </div>
+
+                            <div class="wrap-input100 bg1 rs1-wrap-input100">
+                                <span class="label-input100">Data de Nascimeto</span>
+                                <input class="input100" type="date" name="dt-nascimento" placeholder="dd/MM/AAAA">
+                            </div>
+                            
+                            <div class="wrap-input100 bg1 rs1-wrap-input100">
+                                <span class="label-input100">Rua</span>
+                                <input class="input100" type="text" name="rua" placeholder="Sua Rua">
+                            </div>
+
+                            <div class="wrap-input100 bg1 rs1-wrap-input100">
+                                <span class="label-input100">Bairro</span>
+                                <input class="input100" type="text" name="bairro" placeholder="Seu Bairro">
+                            </div>
+
+                            <div class="wrap-input100 bg1 rs1-wrap-input100">
+                                <span class="label-input100">Número</span>
+                                <input class="input100" type="text" name="bairro" placeholder="Número">
                             </div>
         
                             <div class="wrap-input100 input100-select bg1">
@@ -58,44 +181,20 @@
             
                             
                             <div class="container-contact100-form-btn">
-                                <button id='btn-consultar' class="contact100-form-btn">
+                                <button id='btn-agendar' class="contact100-form-btn">
                                     <span>
-                                        Consultar 
+                                        Atualizar  
                                     </span>
                                 </button>
                             </div>
                         </form>
-                        <div id='div-result' class="is-center">
-                                        
-                                <table class="dataTable">
-                                    <thead>
-                                        <tr>
-                                            <th>Secretaria</th>
-                                            <th>Local</th>
-                                            <th>Horário de Início</th>
-                                            <th>Horário de Término</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Secretaria de Desvio de Verbas</td>
-                                            <td>Prédio 157</td>
-                                            <td>9 horas</td>
-                                            <td>12 horas</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
                     </div>
-    
                 </div>
-            
-        </div>
-        
-        <div class="footer l-box is-center">
-           <p>TADS 6v</p> 
-        </div>
-    <script src = 'apresentacao/js/consultaragendamento/consultar.js'></script>
+    </div>
+
+    </div>
+
+    <script src = 'apresentacao/js/agendamentos/consultar.js'></script>
+    <script src = 'apresentacao/js/agendamentos/modal.js'></script>
 </body>
 </html>

@@ -3,6 +3,7 @@ namespace entidades;
 
 
 use entidades\Persistente;
+use entidades\Cidadao;
 
 class Agendamento extends Persistente{
 
@@ -16,7 +17,7 @@ class Agendamento extends Persistente{
      */
     private $cidadao;
 
-    public function __construct($identificador,$data,$cidadao){
+    public function __construct(int $identificador,string $data,Cidadao $cidadao){
         parent::__construct($identificador);
 
         $this->data = $data;
@@ -24,11 +25,12 @@ class Agendamento extends Persistente{
     }
 
     public static function arrayToOBject(array $valores){
-        return self($valore['data'],$valore['cidadao']);
+        return self($valores['data'],$valores['cidadao']);
     }
 
     public function objectToArray() : array{
         return [
+            "id"=>$this->identificador,
             "data" => $this->data,
             "cidadao" => $this->cidadao
         ];
