@@ -10,7 +10,7 @@ abstract class Persistente {
      */
     protected $identificador;
 
-    public function __construct(int $identificador){
+    public function __construct(int $identificador = null){
         $this->identificador = $identificador;
     }
 

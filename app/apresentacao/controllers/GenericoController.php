@@ -1,7 +1,6 @@
 <?php
 
 use fabricas\IEntidadeFactory;
-use entidades\Persistente;
 use respositorios\IRepositorio;
 
 abstract class GenericoController{
@@ -35,6 +34,13 @@ abstract class GenericoController{
 
     function listar(){
         return json_encode($this->repositorio->selecionarTodos());
+    }
+
+    public function validarCPF($cpf):bool{
+        if(strlen($cpf)!=14){
+            return false;
+        }
+        return true;
     }
 
     abstract function atualizar($json);

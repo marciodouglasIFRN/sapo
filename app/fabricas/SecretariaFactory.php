@@ -8,6 +8,7 @@ class SecretariaFactory implements IEntidadeFactory{
     
     public function criar($json):Persistente
     {
-        return new Secretaria(1,'nome','sigla');
+        $id = isset($json['secretaria_id'])?$json['secretaria_id']:-1;
+        return new Secretaria($id,'nome','sigla');
     }
 }

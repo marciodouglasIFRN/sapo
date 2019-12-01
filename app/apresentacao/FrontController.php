@@ -16,18 +16,18 @@ class FrontController{
     {
         $prefixo = '/marcio/sapo/app';
         $url = str_replace($prefixo,'',$url);
-        $data = explode('/',$url);
-        if($_SERVER['REQUEST_METHOD'] == 'GET'){
+        $verbo = $_SERVER['REQUEST_METHOD'];
+        if($verbo == 'GET'){
             $data = $_GET;
-        }else{
+        }else if($verbo == 'POST'){
             $data = $_POST;
         }
 
-        if(array_key_exists($url,$this->routes))
+        if(array_key_exists($url,$this->routes[$verbo]))
         {
-            $class = "controllers\\" . $this->routes[$url]['controller'];
+            $class = "controllers\\" . $this->routes[$verbo][$url]['controller'];
             $controller = new $class;
-            $action = $this->routes[$url]['action'];
+            $action = $this->routes[$verbo][$url]['action'];
             $resposta = $controller->$action($data);
             echo $resposta;
         }else{

@@ -45,6 +45,7 @@ class DBMySQL{
         try {
             $pdo = self::conexao();
             $stmt = $pdo->prepare($sql);
+            // print_r($dados);
             $stmt->execute($dados);
 
             return $stmt;

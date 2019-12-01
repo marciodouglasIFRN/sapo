@@ -34,65 +34,48 @@
 
             <div class="container-contact100">
                     <div class="wrap-contact100">
-                        <form class="contact100-form validate-form" action="FrontController.php" method="post">
-                           
-                            <div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Name">
-                                <span class="label-input100">Nome Completo</span>
-                                <input class="input100" type="text" name="name" placeholder="Seu nome completo">
-                            </div>
+                        <form class="contact100-form validate-form" id='form-agendar'>
             
-                            <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
-                                <span class="label-input100">Email</span>
-                                <input class="input100" type="text" name="email" placeholder="Seu Email ">
-                            </div>
-            
-                            <div class="wrap-input100 bg1 rs1-wrap-input100">
-                                <span class="label-input100">Telefone</span>
-                                <input class="input100" type="text" name="telefone" placeholder="(--) ---------">
-                            </div>
 
                             <div class="wrap-input100 bg1 rs1-wrap-input100">
                                 <span class="label-input100">CPF</span>
                                 <input class="input100" type="text" name="cpf" placeholder="-----------">
                             </div>
-
                             <div class="wrap-input100 bg1 rs1-wrap-input100">
-                                <span class="label-input100">Data de Nascimeto</span>
-                                <input class="input100" type="date" name="dt-nascimento" placeholder="dd/MM/AAAA">
+                                <span class="label-input100">Nome</span>
+                                <input class="input100" type="text" name="nome" placeholder="Seu nome">
                             </div>
+
                             
-                            <div class="wrap-input100 bg1 rs1-wrap-input100">
-                                <span class="label-input100">Rua</span>
-                                <input class="input100" type="text" name="rua" placeholder="Sua Rua">
-                            </div>
-
-                            <div class="wrap-input100 bg1 rs1-wrap-input100">
-                                <span class="label-input100">Bairro</span>
-                                <input class="input100" type="text" name="bairro" placeholder="Seu Bairro">
-                            </div>
-
-                            <div class="wrap-input100 bg1 rs1-wrap-input100">
-                                <span class="label-input100">Número</span>
-                                <input class="input100" type="text" name="bairro" placeholder="Número">
-                            </div>
-        
                             <div class="wrap-input100 input100-select bg1">
-                                <span class="label-input100">Escolha o serviço</span>
+                                <span class="label-input100">Escolha o Secretaria</span>
                                 <div>
-                                    <select class="js-select2" name="service">
-                                        <option>Secretaria de Transporte</option>
-                                        <option>Secretaria de Educação</option>
-                                        <option>Secretaria de Meio Ambiente</option>
-                                        <option>Secretaria de Saúde</option>
-                                        <option>Secretaria de Esporte</option>
-                                        <option>Secretaria de Pilantragem</option>                     
+                                    <select class="js-select2" name="select-secretarias">               
                                     </select>
                                     <div class="dropDownSelect2"></div>
                                 </div>
                             </div>
-            
-            
-                            
+                            <div class="wrap-input100 input100-select bg1">
+                                <span class="label-input100">Escolha o Serviço</span>
+                                <div>
+                                    <select class="js-select2" name="select-servico">                  
+                                    </select>
+                                    <div class="dropDownSelect2"></div>
+                                </div>
+                            </div>
+                            <div class="wrap-input100 input100-select bg1">
+                                <span class="label-input100">Dia de Atendimento</span>
+                                <div>
+                                    <select class="js-select2" name="dt-atendimento">
+                                                       
+                                    </select>
+                                    <div class="dropDownSelect2"></div>
+                                </div>
+                            </div>
+                            <table class="dataTable">
+                                <thead></thead>
+                                <tbody></tbody>
+                            </table>
                             <div class="container-contact100-form-btn">
                                 <button id='btn-agendar' class="contact100-form-btn">
                                     <span>
@@ -101,15 +84,17 @@
                                 </button>
                             </div>
                         </form>
+                        
                     </div>
                 </div>
             
         </div>
-        
-    
         <div class="footer l-box is-center">
            <p>TADS 6v</p> 
         </div>
+        <script src = 'apresentacao/js/comum.js'></script>
+        <script src = 'apresentacao/js/agendamento/consultar.js'></script>
+        <script src = 'apresentacao/js/agendamento/ajendar.js'></script>
 
 </body>
 </html>

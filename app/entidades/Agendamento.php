@@ -17,11 +17,18 @@ class Agendamento extends Persistente{
      */
     private $cidadao;
 
-    public function __construct(int $identificador,string $data,Cidadao $cidadao){
-        parent::__construct($identificador);
+    /**
+     * @var Servico
+     */
+    private $servico;
 
+    public function __construct(int $identificador = null,string $data,Cidadao $cidadao,Servico $servico){
+        if($identificador != null){
+            parent::__construct($identificador);
+        }
         $this->data = $data;
         $this->cidadao = $cidadao;
+        $this->servico = $servico;
     }
 
     public static function arrayToOBject(array $valores){
@@ -32,7 +39,8 @@ class Agendamento extends Persistente{
         return [
             "id"=>$this->identificador,
             "data" => $this->data,
-            "cidadao" => $this->cidadao
+            "cidadao" => $this->cidadao->getIdentificador(),
+            "servico" => $this->servico->getIdentificador(),
         ];
     }
     public function getData(){

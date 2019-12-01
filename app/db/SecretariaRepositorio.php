@@ -28,6 +28,12 @@ class SecretariaRepositorio extends DBMySQL implements IRepositorio{
         // return $this->select($sql,array("cpf"=> $persistente->getCidadao()->getCpf()));
     }
 
+    public function selecionarDiasDeAtendimento(Persistente $persistente){
+        $sql = "SELECT dia.nome, atendimentos FROM `dia`,`dia_secretaria` WHERE dia.id = dia_id and secretaria_id = :id";
+        // return $persistente->getIdentificador();
+        return $this->select($sql,array("id"=>$persistente->getIdentificador()));
+    }
+
     public function selecionarTodos(){
         $sql = "SELECT * FROM `secretaria` WHERE 1";
         return $this->select($sql,array());

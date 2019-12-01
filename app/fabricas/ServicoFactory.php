@@ -9,7 +9,9 @@ class ServicoFactory implements IEntidadeFactory{
     public function criar($json):Persistente
     {
         $fabrica = new SecretariaFactory;
-        $entidade = $fabrica->criar($json);
-        return new Servico(1,'nome',$entidade);
+        $secretaria = $fabrica->criar($json);
+        $nome = isset($json['nome'])?$json['nome']:'';
+        $id = isset($json['servico_id'])?$json['servico_id']:null;
+        return new Servico($id,$nome,$secretaria);
     }
 }

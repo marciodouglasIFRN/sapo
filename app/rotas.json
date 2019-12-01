@@ -1,43 +1,48 @@
 {
-    "/home": {
-        "controller": "IndexController",
-        "action": "index"
+    "POST": {
+        "/obter": {
+            "controller": "AgendamentoController",
+            "action": "consultar"
+        },
+        "/agendamentos": {
+            "controller": "AgendamentoController",
+            "action": "criar"
+        }
     },
 
-    "/agendar": {
-        "controller": "IndexController",
-        "action": "agendar",
-        "method": "GET"
-    },
-    "/agendados": {
-        "controller": "IndexController",
-        "action": "agendados",
-        "method": "GET"
-    },
-    "/consultar": {
-        "controller": "IndexController",
-        "action": "consultar",
-        "method": "GET"
-    },
-    "/reagendar": {
-        "controller": "IndexController",
-        "action": "reagendar",
-        "method": "GET"
-    },
-    "/obter": {
-        "controller": "AgendamentoController",
-        "action": "consultar",
-        "method": "POST"
-    },
-    "/secretarias": {
-        "controller": "SecretariaController",
-        "action": "listar",
-        "method": "GET"
-    },
-    "/servicos": {
-        "controller": "ServicoController",
-        "action": "consultar",
-        "method": "GET"
+    "GET": {
+        "/secretarias": {
+            "controller": "SecretariaController",
+            "action": "listar"
+        },
+        "/servicos": {
+            "controller": "ServicoController",
+            "action": "consultar"
+        },
+        "/dias": {
+            "controller": "SecretariaController",
+            "action": "diasAtendimentos"
+        },
+        "/home": {
+            "controller": "IndexController",
+            "action": "index"
+        },
+
+        "/agendar": {
+            "controller": "IndexController",
+            "action": "agendar"
+        },
+        "/agendados": {
+            "controller": "IndexController",
+            "action": "agendados"
+        },
+        "/consultar": {
+            "controller": "IndexController",
+            "action": "consultar"
+        },
+        "/reagendar": {
+            "controller": "IndexController",
+            "action": "reagendar"
+        }
     }
-
 }

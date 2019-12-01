@@ -15,22 +15,22 @@ class IndexController extends GenericoController{
 
     function agendados()
     {
-        $this->render('agendados');
+        $this->render('agendamento/listar');
     }
 
     function agendar()
     {
-        $this->render('agendar');
+        $this->render('agendamento/criar');
     }
 
     function consultar()
     {
-        $this->render('consultaragendamento');
+        $this->render('agendamento/consultar');
     }
 
     function reagendar()
     {
-        $this->render('reagendar');
+        $this->render('agendamento/atualizar');
     }
 
     function atualizar($json)

@@ -17,7 +17,7 @@ class Servico extends Persistente{
     private $secretaria;
 
 
-    public function __construct(int $identificador,string $nome,Secretaria $secretaria){
+    public function __construct(int $identificador = null,string $nome,Secretaria $secretaria){
         parent::__construct($identificador);
         $this->nome = $nome;
         $this->secretaria = $secretaria;

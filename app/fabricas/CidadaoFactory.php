@@ -7,6 +7,6 @@ use entidades\Persistente;
 class CidadaoFactory implements IEntidadeFactory{
     function criar($json):Persistente
     {
-        return new Cidadao(1,'qualquer',$json['cpf']);
+        return new Cidadao(1,"nome",'111.111.111-11');
     }
 }

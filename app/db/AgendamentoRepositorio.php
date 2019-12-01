@@ -9,7 +9,7 @@ class AgendamentoRepositorio extends DBMySQL implements IRepositorio {
     }
     
     public function inserir(Persistente $persistente){
-        $sql = "INSERT INTO atendimento (data,cidadao_id) VALUES (:data,:cidadao)";
+        $sql = "INSERT INTO agendamento (id,data,cidadao_id,servico_id) VALUES (:id,:data,:cidadao,:servico)";
         return $this->update($sql, $persistente->objectToArray());
     }
 
@@ -29,7 +29,7 @@ class AgendamentoRepositorio extends DBMySQL implements IRepositorio {
     }
 
     public function selecionarTodos(){
-        $sql = "SELECT `id`, `data`, `cidadao_id` FROM `atendimento` WHERE 1";
+        $sql = "SELECT `id`, `data`, `cidadao_id`, `servico_id` FROM `atendimento` WHERE 1";
         return $this->select($sql,array());
     }
 

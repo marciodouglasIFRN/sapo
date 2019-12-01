@@ -1,15 +1,16 @@
 <?php
+
+use controllers\AgendamentoController;
 use PHPUnit\Framework\TestCase;
-use entidades\Agendamento;
 
 final class AgendamentoTeste extends TestCase
 {
     protected $testador;
     
-    public function testQualquer(): void
+    public function testValidarCpf(): void
     {
-        $this->testador = new Agendamento(1,"o",null);
-        $this->assertEquals('Márcio','Márcio');
+        $this->testador = new AgendamentoController;
+        $this->assertTrue($this->testador->validarCpf('111.1111111-11'));
     }
 
     public function testQualquer2(): void

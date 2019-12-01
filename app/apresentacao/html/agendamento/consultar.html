@@ -42,7 +42,7 @@
                                         <input class="input100" type="text" name="cpf" placeholder="-----------">
                                     </div>
                                     <div class="wrap-input100 input100-select bg1">
-                                        <span class="label-input100">Escolha o serviço</span>
+                                        <span class="label-input100">Escolha a Secretaria</span>
                                         <div>
                                             <select class="js-select2" name="select-secretarias">                
                                             </select>
@@ -91,31 +91,13 @@
 
             <div id="conteudo-inferior" class="ribbon l-box-lrg pure-g modal-content">
                     <div id="conteudo-interno" class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
-                        <form class="contact100-form validate-form" action="FrontController.php" method="post">
+                        <form id="form-atualizar" class="contact100-form validate-form" method="post">
                            
 
                             <div class="wrap-input100 bg1 rs1-wrap-input100">
                                 <span class="label-input100">Nova Data</span>
                                 <input class="input100" type="date" name="nova-data" placeholder="dd/MM/AAAA">
                             </div>
-                            <div class="wrap-input100 input100-select bg1">
-                                <span class="label-input100">Escolha a Secretaria</span>
-                                <div>
-                                    <select class="js-select2" name="select-ecretarias-modal">                  
-                                    </select>
-                                    <div class="dropDownSelect2"></div>
-                                </div>
-                            </div>
-                            <div class="wrap-input100 input100-select bg1">
-                                <span class="label-input100">Escolha o Servico</span>
-                                <div>
-                                    <select class="js-select2" name="select-servicos">                 
-                                    </select>
-                                    <div class="dropDownSelect2"></div>
-                                </div>
-                            </div>
-            
-                            
                             <div class="container-contact100-form-btn">
                                 <button id='btn-agendar' class="contact100-form-btn">
                                     <span>
@@ -129,8 +111,8 @@
     </div>
 
     </div>
-
-    <script src = 'apresentacao/js/agendamentos/consultar.js'></script>
-    <script src = 'apresentacao/js/agendamentos/modal.js'></script>
+    <script src = 'apresentacao/js/comum.js'></script>
+    <script src = 'apresentacao/js/agendamento/consultar.js'></script>
+    <script src = 'apresentacao/js/agendamento/modal.js'></script>
 </body>
 </html>
